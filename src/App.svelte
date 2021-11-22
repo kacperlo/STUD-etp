@@ -1,30 +1,29 @@
 <script>
-	export let name;
+	import Tabs from "./Tabs.svelte";
+
+	// List of tab items with labels and values.
+	let tabItems = [
+		{ label: "Zadanie 1", value: 1 },
+		{ label: "Zadanie 2", value: 2 },
+		{ label: "Zadanie 3", value: 3 }
+	];
+
+	// Current active tab
+	let currentTab;
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Tabs bind:activeTabValue={currentTab} items={tabItems} />
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+<code class="language-text"></code>
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+{#if 1 === currentTab}
+	<h3>Tab 1 content</h3>
+{/if}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+{#if 2 === currentTab}
+	<h3>Tab 2 content</h3>
+{/if}
+
+{#if 3 === currentTab}
+	<h3>Tab 3 content</h3>
+{/if}
