@@ -41,6 +41,11 @@
     display: block;
     padding: 0.5rem 1rem;
     cursor: pointer;
+
+    color: #ff3e00;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 100;
   }
 
   span:hover {
