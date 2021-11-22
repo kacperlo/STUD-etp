@@ -1,5 +1,6 @@
 <script>
 	import Tabs from "./Tabs.svelte";
+	import Chart from "./Chart.svelte";
 
 	// List of tab items with labels and values.
 	let tabItems = [
@@ -21,6 +22,7 @@
 
 	{#if 1 === currentTab}
 		<h3>Tab 1 content</h3>
+		<Chart />
 	{/if}
 
 	{#if 2 === currentTab}
