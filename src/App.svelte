@@ -1,6 +1,8 @@
 <script>
 	import Tabs from "./Tabs.svelte";
-	import Chart from "./Chart.svelte";
+	import Task1 from "./Tasks/Task1.svelte";
+	import Task2 from "./Tasks/Task2.svelte";
+	import Task3 from "./Tasks/Task3.svelte";
 
 	// List of tab items with labels and values.
 	let tabItems = [
@@ -14,23 +16,25 @@
 </script>
 
 <main>
-	<h1>Elektroniczne techniki pomiarowe</h1>
+	<h1 style="font-size: 2.3rem">Elektroniczne techniki pomiarowe</h1>
 
 	<Tabs bind:activeTabValue={currentTab} items={tabItems} />
 
 	<code class="language-text"></code>
 
 	{#if 1 === currentTab}
-		<h3>Tab 1 content</h3>
-		<Chart />
+		<h3>Wykresy Ng i ng</h3>
+		<Task1 />
 	{/if}
 
 	{#if 2 === currentTab}
-		<h3>Tab 2 content</h3>
+		<h3>Wpływ warunków atmosferycznych na poprawkę</h3>
+		<Task2 />
 	{/if}
 
 	{#if 3 === currentTab}
-		<h3>Tab 3 content</h3>
+		<h3>Różnica między łukiem a cięciwą</h3>
+		<Task3 />
 	{/if}
 </main>
 
