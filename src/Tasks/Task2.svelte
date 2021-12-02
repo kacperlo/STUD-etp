@@ -16,8 +16,8 @@
 <div style="width: 50%; float: left">
     <h3>Długość fali [nm]</h3>
     <label>
-        <input type=number bind:value={dlFali} min=1 max=10000>
-        <input style='width: 600px' type=range bind:value={dlFali} min=1 max=10000>
+        <input type=number bind:value={dlFali} min=1 max=3000>
+        <input style='width: 600px' type=range bind:value={dlFali} min=1 max=3000>
     </label>
     <h3>Temperatura sucha [C]</h3>
     <label>
@@ -41,7 +41,7 @@
     </label>
 </div>
 <div style="width: 50%; float: left">
-    <h2>Poprawka na km [mm]:</h2><p>{poprawka}</p>
-    <h2>Poprawka do mierzonej długości [mm]:</h2><p>{poprawka*d/1000}</p>
-    <h2>Długość poprawiona [m]:</h2><p>{d + (poprawka*d/1000000)}</p>
+    <h2>Poprawka na km [mm]:</h2><p>{poprawka.toFixed(2)}</p>
+    <h2>Poprawka do mierzonej długości [mm]:</h2><p>{(poprawka*d/1000).toFixed(2)}</p>
+    <h2>Długość poprawiona [m]:</h2><p>{(d + (poprawka*d/1000000)).toFixed(2)}</p>
 </div>
