@@ -43,5 +43,5 @@
 <div style="width: 50%; float: left">
     <h2>Poprawka na km [mm]:</h2><p>{poprawka.toFixed(2)}</p>
     <h2>Poprawka do mierzonej długości [mm]:</h2><p>{(poprawka*d/1000).toFixed(2)}</p>
-    <h2>Długość poprawiona [m]:</h2><p>{(d + (poprawka*d/1000000)).toFixed(2)}</p>
+    <h2>Długość poprawiona [m]:</h2><p>{(d + (poprawka*d/1000000)).toFixed(5)}</p>
 </div>
